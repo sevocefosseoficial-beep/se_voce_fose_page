@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight Filosófico Diário - Se Você Fosse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Insight Filosófico do Dia</h1>
+            <p>Receba uma nova reflexão diária para transformar o seu dia e compartilhar com seu público!</p>
+        </header>
+
+        <div class="quote-box">
+            <p id="quote">Carregando...</p>
+        </div>
+
+        <button onclick="generateQuote()">Gerar Novo Insight</button>
+
+        <div class="social-links">
+            <h2>Me acompanhe nas redes sociais</h2>
+            <div class="links">
+                <a href="https://www.youtube.com/@SeVoceFosseOficial" target="_blank" class="social-btn">YouTube</a>
+                <a href="https://www.tiktok.com/@sevocefosse.oficial" target="_blank" class="social-btn">Instagram</a>
+                <a href="https://www.instagram.com/sevocefosse.oficial" target="_blank" class="social-btn">TikTok</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>Envie uma mensagem para mim!</h2>
+            <p>Clique abaixo para enviar uma mensagem direta no Instagram.</p>
+            <a href="https://www.instagram.com/direct/t/17842460532600924" class="message-btn">Mandar mensagem</a>
+        </div>
+
+        <div class="about">
+            <h2>Sobre o Canal</h2>
+            <p>O canal "Se Você Fosse" foi criado para compartilhar reflexões profundas sobre a vida, emoções e autoconhecimento. Acredito que, quando nos colocamos como prioridade, mudamos nossa forma de ver o mundo e nós mesmos.</p>
+        </div>
+
+        <div class="newsletter">
+            <h2>Assine para receber mais reflexões diárias!</h2>
+            <form action="#">
+                <input type="email" placeholder="Digite seu e-mail" required>
+                <button type="submit">Assinar</button>
+            </form>
+        </div>
+
+ <div class="social-share">
+            <h3>Compartilhe este insight:</h3>
+            <a href="" target="_blank" class="share-btn">Facebook</a>
+            <a href="https://x.com/SeFosse67789" target="_blank" class="share-btn">Twitter</a>
+            <a href="https://www.instagram.com/sevocefosse.oficial" target="_blank" class="share-btn">Instagram</a>
+        </div>
+
+        <div class="music-control">
+            <h3>Escute música ambiente para reflexão:</h3>
+            <button onclick="toggleMusic()">Play/Pause Música Ambiente</button>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2025 Se Você Fosse. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+  <audio id="background-music" loop>
+        <source src="path_to_music.mp3" type="audio/mp3">
+        Seu navegador não suporta o áudio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
