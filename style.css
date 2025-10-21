@@ -6,42 +6,66 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #a2a7af;
+    background-color: #9fa6b1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
+    height: 100vh;
     color: #333;
     padding: 10px;
 }
 
-.container {
+/* Barra de navegação */
+.navbar {
+    background-color: #3498db;
+    width: 100%;
+    padding: 15px 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do container */
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 80px; /* Dá espaçamento para a barra de navegação */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px; /* Largura máxima para evitar que a página fique muito larga em telas grandes */
     padding: 20px;
-    margin: 20px;
 }
 
-.header {
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 24px;
+/* Títulos das seções */
+.section h2, .section h3 {
+    font-size: 22px;
     color: #2c3e50;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 18px;
-    color: #7f8c8d;
-}
-
+/* Estilo das frases */
 .quote-box {
     margin: 30px 0;
     padding: 20px;
@@ -53,164 +77,74 @@ p {
     color: #2c3e50;
 }
 
-button {
+/* Botões */
+button, .social-btn, .message-btn, .share-btn {
     padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button {
     background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
     margin-top: 20px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #2980b9;
-    transform: scale(1.1);
-}
-
-.social-links {
-    margin-top: 30px;
-}
-
-.social-links h2 {
-    font-size: 20px;
-    color: #2c3e50;
-}
-
-.links {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    flex-wrap: wrap; /* Garante que os botões se ajustem no celular */
 }
 
 .social-btn {
-    padding: 10px 20px;
     background-color: #2ecc71;
     color: white;
-    border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
-    margin: 5px;
-    transition: background-color 0.3s ease;
+    margin: 10px;
 }
 
 .social-btn:hover {
     background-color: #27ae60;
 }
 
-.contact {
-    margin-top: 40px;
-}
-
-.contact h2 {
-    font-size: 20px;
-    color: #2c3e50;
-}
-
 .message-btn {
-    display: inline-block;
-    padding: 12px 25px;
     background-color: #e74c3c;
     color: white;
-    border-radius: 5px;
     text-decoration: none;
-    font-size: 18px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
 
 .message-btn:hover {
     background-color: #c0392b;
 }
 
-.about {
-    margin-top: 40px;
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.about h2 {
-    font-size: 22px;
-    color: #2c3e50;
-}
-
-.about p {
-    font-size: 16px;
-    color: #7f8c8d;
-}
-
-.newsletter {
-    margin-top: 40px;
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.newsletter h2 {
-    font-size: 22px;
-    color: #2c3e50;
-}
-
-.newsletter input {
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.newsletter button {
-    padding: 12px 25px;
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.newsletter button:hover {
-    background-color: #2980b9;
-}
-
-.social-share {
-    margin-top: 40px;
-    text-align: center;
-}
-
 .share-btn {
-    padding: 10px 20px;
     background-color: #8e44ad;
     color: white;
     text-decoration: none;
     margin: 10px;
-    border-radius: 5px;
-    font-size: 16px;
 }
 
 .share-btn:hover {
     background-color: #9b59b6;
 }
 
-.music-control {
-    margin-top: 30px;
-}
-
 .music-control button {
-    padding: 12px 25px;
     background-color: #f39c12;
     color: white;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 .music-control button:hover {
     background-color: #e67e22;
+}
+
+/* Seções de texto e formulário */
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 footer {
@@ -219,10 +153,9 @@ footer {
     color: #7f8c8d;
 }
 
-/* Responsividade para telas pequenas */
+/* Responsividade */
 @media screen and (max-width: 768px) {
     .container {
-        width: 100%;
         padding: 15px;
     }
 
@@ -230,18 +163,18 @@ footer {
         font-size: 22px;
     }
 
-    p, .quote-box {
+    .quote-box {
         font-size: 16px;
-    }
-
-    .social-btn, .message-btn, .share-btn {
-        padding: 10px 18px;
-        font-size: 14px;
     }
 
     button {
-        padding: 12px 20px;
         font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .social-btn, .message-btn, .share-btn {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 
     .links {
@@ -256,9 +189,8 @@ footer {
         padding: 15px;
     }
 
-    .social-btn, .message-btn, .share-btn {
-        padding: 8px 16px;
+    button, .social-btn, .message-btn, .share-btn {
+        padding: 10px 20px;
         font-size: 12px;
     }
 }
-
